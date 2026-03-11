@@ -1,0 +1,147 @@
+:root{
+  --bg:#0b0f14;
+  --card:#121826;
+  --card2:#0f1624;
+  --text:#e7eefc;
+  --muted:#a9b4c7;
+  --line:#243047;
+  --brand:#7c5cff;
+  --brand2:#00d4ff;
+  --ok:#2ee59d;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  color:var(--text);
+  background: radial-gradient(1200px 600px at 20% 0%, rgba(124,92,255,.25), transparent 60%),
+              radial-gradient(1000px 500px at 90% 10%, rgba(0,212,255,.18), transparent 55%),
+              var(--bg);
+}
+
+a{color:inherit}
+code{background:rgba(255,255,255,.06); padding:.15rem .35rem; border:1px solid rgba(255,255,255,.08); border-radius:.4rem}
+
+.container{max-width:1060px; margin:0 auto; padding:0 18px}
+
+.header{
+  position:sticky; top:0; z-index:10;
+  backdrop-filter: blur(10px);
+  background: rgba(11,15,20,.72);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.header .container{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 18px}
+
+.brand{display:flex; align-items:center; gap:12px}
+.logo{width:42px; height:42px; display:grid; place-items:center; background:linear-gradient(135deg, rgba(124,92,255,.35), rgba(0,212,255,.22)); border:1px solid rgba(255,255,255,.10); border-radius:14px; font-size:22px}
+.brand h1{font-size:16px; margin:0; line-height:1.15}
+.sub{margin:3px 0 0; color:var(--muted); font-size:12.5px}
+
+.cta{display:inline-flex; align-items:center; justify-content:center; text-decoration:none; padding:10px 14px; border-radius:12px; font-weight:650; background:linear-gradient(135deg, rgba(124,92,255,1), rgba(0,212,255,1)); color:#061017}
+
+.hero{padding:34px 0 14px}
+.rules,.order{padding:18px 0 26px}
+
+.grid2{display:grid; grid-template-columns: 1.3fr .9fr; gap:16px}
+@media (max-width: 860px){
+  .grid2{grid-template-columns:1fr}
+  .header .container{flex-wrap:wrap}
+}
+
+.card{
+  background: linear-gradient(180deg, rgba(18,24,38,.96), rgba(15,22,36,.92));
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.preview h3{margin-top:0}
+
+h2{font-size:34px; margin:0 0 12px}
+@media (max-width: 860px){h2{font-size:28px}}
+
+h3{margin:0 0 10px; font-size:18px}
+
+.bullets{margin:0; padding-left: 18px; color:var(--text)}
+.bullets li{margin: 8px 0; color:rgba(231,238,252,.92)}
+
+.note{margin-top:14px; padding:12px 12px; border-radius:14px; border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.03)}
+.note-title{font-weight:700; margin-bottom:6px}
+.note-body{color:var(--muted); line-height:1.55}
+
+.kpis{display:grid; grid-template-columns: repeat(3, 1fr); gap:10px; margin-top:10px}
+.kpi{padding:12px; border-radius:14px; border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.03)}
+.kpi-num{font-weight:800; font-size:18px}
+.kpi-label{color:var(--muted); font-size:12px; margin-top:4px}
+.divider{height:1px; background:rgba(255,255,255,.07); margin:12px 0}
+
+.price{font-weight:800; color: #fff}
+
+.small{font-size:12.5px; line-height:1.55}
+.muted{color:var(--muted)}
+
+.qr-grid{display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-top:12px}
+@media (max-width: 520px){.qr-grid{grid-template-columns:1fr}}
+
+.qr-box{aspect-ratio:1/1; width:100%; border-radius:16px; border:1.5px dashed rgba(255,255,255,.25); background:rgba(255,255,255,.03); display:grid; place-items:center; overflow:hidden}
+.qr-placeholder{color:rgba(231,238,252,.72); text-align:center; line-height:1.4; white-space:pre-line; padding:10px}
+.qr-label{margin-top:8px; text-align:center; color:var(--muted); font-size:12.5px}
+
+.tip{margin-top:12px; padding:10px 12px; border-radius:14px; border:1px solid rgba(255,255,255,.08); background:rgba(124,92,255,.08); color:rgba(231,238,252,.9)}
+
+.form{display:flex; flex-direction:column; gap:12px; margin-top:12px}
+label{display:flex; flex-direction:column; gap:7px; font-size:13px; color:rgba(231,238,252,.9)}
+input,textarea{
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(0,0,0,.22);
+  color:var(--text);
+  padding:12px 12px;
+  outline:none;
+}
+input:focus,textarea:focus{border-color: rgba(0,212,255,.55); box-shadow: 0 0 0 3px rgba(0,212,255,.12)}
+
+.form-row{display:grid; grid-template-columns: 1fr 1fr; gap:12px}
+@media (max-width: 860px){.form-row{grid-template-columns:1fr}}
+
+.fieldset{
+  margin:0; border:1px solid rgba(255,255,255,.10); border-radius:14px; padding:10px 12px;
+  background:rgba(255,255,255,.02)
+}
+legend{padding:0 6px; color:rgba(231,238,252,.85); font-size:12.5px}
+.radio{flex-direction:row; align-items:center; gap:10px; margin:8px 0; font-size:13px; color:rgba(231,238,252,.9)}
+.radio input{width:16px; height:16px; padding:0}
+
+.check{flex-direction:row; gap:10px; align-items:flex-start; line-height:1.45}
+.check input{width:18px; height:18px; margin-top:2px}
+
+.req{color:var(--brand2); font-weight:800}
+
+.actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:6px}
+.btn{
+  appearance:none;
+  border:0;
+  border-radius:14px;
+  padding:11px 14px;
+  font-weight:750;
+  cursor:pointer;
+  background: linear-gradient(135deg, rgba(124,92,255,1), rgba(0,212,255,1));
+  color:#061017;
+}
+.btn.secondary{
+  background: rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  color:rgba(231,238,252,.95);
+}
+.btn:active{transform: translateY(1px)}
+
+.result{margin-top:14px; border-top:1px solid rgba(255,255,255,.08); padding-top:14px}
+.result-head{display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap}
+.badge{padding:6px 10px; border-radius:999px; border:1px solid rgba(46,229,157,.35); background: rgba(46,229,157,.10); color: rgba(231,238,252,.95); font-weight:700; font-size:12.5px}
+.result-text{margin:10px 0 0; padding:12px; border-radius:14px; border:1px solid rgba(255,255,255,.10); background: rgba(0,0,0,.22); color: rgba(231,238,252,.92); overflow:auto; white-space:pre-wrap}
+.result-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+
+.footer{padding:22px 0 34px; border-top:1px solid rgba(255,255,255,.06); margin-top:18px}
